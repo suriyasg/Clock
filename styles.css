@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.horizondalLine {
+    border-top: 6px solid black;
+    width: 50px;
+    margin: 5px;
+}
+
+.leftVerticalLine {
+    border-left: 6px solid black;
+    height: 50px;
+    margin: 5px;
+    padding: 0;
+}
+
+.rightVerticalLine {
+    border-right: 6px solid black;
+    height: 50px;
+    margin: 5px;
+    padding: 0;
+}
+
+.doubleVerticalLine {
+    border-left: 6px solid black;
+    border-right: 6px solid black;
+    height: 50px;
+    margin: 5px;
+    padding: 0;
+}
+
+.singleDigit {
+    width: 70px;
+}
+
+.end {
+    float: right;
+}
+
+.hidden {
+    border-color: transparent; 
+}
+
+.dot {
+    font-size: 100px;
+    line-height: 100px;
+    margin-bottom: 20px;
+}
