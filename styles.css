@@ -32,6 +32,7 @@ body {
     border-top: var(--bar-thick) solid var(--clock-color);
     width: var(--bar-length);
     margin: 5px;
+    margin-left: 10px;
 }
 
 .leftVerticalLine {
@@ -94,7 +95,7 @@ body {
 
 @media (max-width: 600px) {
     :root {
-        --bar-length: 30px; 
+        --bar-length: 25px; 
         --bar-thick: 4px;   
         --digit-width: 45px;
         --gap: 3px;         
