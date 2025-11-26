@@ -1,3 +1,13 @@
+:root {
+    --bar-length: 50px;      
+    --bar-thick: 6px;        
+    --digit-width: 70px;     
+    --gap: 5px;              
+    --dot-size: 100px;       
+    --text-size: 10px;       
+    --clock-color: rgb(103, 171, 255);
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -19,35 +29,35 @@ body {
 }
 
 .horizondalLine {
-    border-top: 6px solid rgb(103, 171, 255);
-    width: 50px;
+    border-top: var(--bar-thick) solid var(--clock-color);
+    width: var(--bar-length);
     margin: 5px;
 }
 
 .leftVerticalLine {
-    border-left: 6px solid rgb(103, 171, 255);
-    height: 50px;
+    border-left: var(--bar-thick) solid var(--clock-color);
+    height: var(--bar-length);
     margin: 5px;
     padding: 0;
 }
 
 .rightVerticalLine {
-    border-right: 6px solid rgb(103, 171, 255);
-    height: 50px;
+    border-right: var(--bar-thick) solid var(--clock-color);
+    height: var(--bar-length);
     margin: 5px;
     padding: 0;
 }
 
 .doubleVerticalLine {
-    border-left: 6px solid rgb(103, 171, 255);
-    border-right: 6px solid rgb(103, 171, 255);
-    height: 50px;
+    border-left: var(--bar-thick) solid var(--clock-color);
+    border-right: var(--bar-thick) solid var(--clock-color);
+    height: var(--bar-length);
     margin: 5px;
     padding: 0;
 }
 
 .singleDigit {
-    width: 70px;
+    width: var(--digit-width)
 }
 
 .end {
@@ -59,19 +69,19 @@ body {
 }
 
 .dot {
-    font-size: 100px;
+    font-size: var(--dot-size);
     /* line-height: 100px; */
     /* margin-bottom: 20px; */
-    color: rgb(103, 171, 255);
+    color: var(--clock-color);
     height: auto;
 }
 
 .meridiem {
-    font-size: 10px;
+    font-size: var(--text-size);
     /* line-height: auto; */
     height: auto;
     /* margin-bottom: 20px; */
-    color: rgb(103, 171, 255);
+    color: var(--clock-color)
 }
 
 .dot-meridiem {
@@ -81,3 +91,18 @@ body {
     /* height: 70px; */
 }
 
+
+@media (max-width: 600px) {
+    :root {
+        --bar-length: 30px; 
+        --bar-thick: 4px;   
+        --digit-width: 45px;
+        --gap: 3px;         
+        --dot-size: 60px;
+        --text-size: 8px;
+    }
+    
+    .clock-display {
+        padding: 5px;
+    }
+}
