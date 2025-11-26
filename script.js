@@ -6,6 +6,8 @@ const fourth_digit_div = document.getElementById('fourth');
 const fifth_digit_div = document.getElementById('fifth');
 const sixth_digit_div = document.getElementById('sixth');
 
+const meridiem = document.getElementById('meridiem');
+
 // 2. Create a function to update a specific digit
 // This modifies the classes inside the container you pass to it
 
@@ -69,6 +71,10 @@ function setDigit(digitContainer, number) {
     setVerticalStyle(botVert, config.botV);
 }
 
+function setMeridiem(meridiem, currentMeridiem) {
+    meridiem.innerText = currentMeridiem;
+}
+
 function startClock() {
     const now = new Date();
     
@@ -76,6 +82,9 @@ function startClock() {
     const hours = now.getHours();
     const minutes = now.getMinutes();
     const seconds = now.getSeconds();
+
+    setMeridiem(meridiem, hours >= 12 ? 'PM' : 'AM')
+
 
     // 2. Split Hours (e.g., 12 -> 1 and 2)
     const h1 = Math.floor(hours / 10);

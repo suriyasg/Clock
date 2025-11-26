@@ -5,29 +5,42 @@ body {
     height: 100vh;
 }
 
+.clock-box {
+    display: flex;
+    width: auto;
+    border: 6px solid black;
+    border-radius: 10px;
+}
+
+.clock-display {
+    display: flex;
+    padding: 10px;
+    background-color: black;
+}
+
 .horizondalLine {
-    border-top: 6px solid black;
+    border-top: 6px solid rgb(103, 171, 255);
     width: 50px;
     margin: 5px;
 }
 
 .leftVerticalLine {
-    border-left: 6px solid black;
+    border-left: 6px solid rgb(103, 171, 255);
     height: 50px;
     margin: 5px;
     padding: 0;
 }
 
 .rightVerticalLine {
-    border-right: 6px solid black;
+    border-right: 6px solid rgb(103, 171, 255);
     height: 50px;
     margin: 5px;
     padding: 0;
 }
 
 .doubleVerticalLine {
-    border-left: 6px solid black;
-    border-right: 6px solid black;
+    border-left: 6px solid rgb(103, 171, 255);
+    border-right: 6px solid rgb(103, 171, 255);
     height: 50px;
     margin: 5px;
     padding: 0;
@@ -47,6 +60,24 @@ body {
 
 .dot {
     font-size: 100px;
-    line-height: 100px;
-    margin-bottom: 20px;
+    /* line-height: 100px; */
+    /* margin-bottom: 20px; */
+    color: rgb(103, 171, 255);
+    height: auto;
 }
+
+.meridiem {
+    font-size: 10px;
+    /* line-height: auto; */
+    height: auto;
+    /* margin-bottom: 20px; */
+    color: rgb(103, 171, 255);
+}
+
+.dot-meridiem {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* height: 70px; */
+}
+
